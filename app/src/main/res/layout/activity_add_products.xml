@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="@color/colorAccent"
+    android:layout_height="match_parent"
+    tools:context="Seller.AddProducts">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="10dp"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/requestBox"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Add New Product"
+                    android:textSize="26dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryblack"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+                <EditText
+                    android:id="@+id/addProduct_pName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Product Name"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimaryblack"
+                    android:textColorHint="@color/colorPrimaryblack"
+                    android:ems="10"
+                    android:background="@drawable/custom_input"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:drawablePadding="10dp"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/addProduct_desc"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Product Description"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorPrimaryblack"
+                    android:textColor="@color/colorPrimaryblack"
+                    android:ems="10"
+                    android:background="@drawable/custom_input"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:drawablePadding="10dp"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/addProduct_miniPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="Minimum Price"
+                    android:textColorHint="@color/colorPrimaryblack"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorPrimaryblack"
+                    android:ems="10"
+                    android:background="@drawable/custom_input"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:drawablePadding="10dp"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Auction Time :"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorPrimaryblack"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/autionTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/colorPrimaryblack"
+                        android:textColor="@color/colorPrimaryblack"
+                        android:hint="Minutes"
+                        android:ems="10"
+                        android:background="@drawable/custom_input"
+                        android:layout_marginTop="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:drawablePadding="10dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <TextView
+                    android:text="Select Image"
+                    android:textSize="26dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryblack"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+                <ImageView
+                    android:id="@+id/selected_img"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu_camera"
+                    android:layout_height="200dp"></ImageView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/add_productBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Product"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_button"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
